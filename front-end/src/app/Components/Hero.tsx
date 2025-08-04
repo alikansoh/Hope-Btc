@@ -83,7 +83,7 @@ export default function Hero() {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            London's #1 F-Gas Training Provider
+            London&apos;s #1 F-Gas Training Provider
           </motion.div>
 
           {/* Main Heading with improved typography and better contrast */}
@@ -130,7 +130,7 @@ export default function Hero() {
               textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)' 
             }}
           >
-            London's Most Trusted F-Gas Training Provider
+            London&apos;s Most Trusted F-Gas Training Provider
           </motion.p>
 
           {/* Description with improved readability */}
@@ -141,8 +141,8 @@ export default function Hero() {
             className="max-w-4xl mx-auto mb-12 space-y-4"
           >
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
-              Whether you're starting a career in refrigeration, air conditioning and heat pumps 
-              or looking to renew your certification, we're here to support you every step of the way.
+              Whether you&apos;re starting a career in refrigeration, air conditioning and heat pumps 
+              or looking to renew your certification, we&apos;re here to support you every step of the way.
             </p>
             
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
