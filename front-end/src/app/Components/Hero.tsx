@@ -85,7 +85,7 @@ export default function Hero() {
         <div className="flex justify-center flex-wrap gap-6 mb-12">
           <Link
             href="/courses"
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg font-semibold text-lg text-white shadow-lg transition-all duration-200"
+            className="px-8 py-4 bg-[#146AAC] hover:from-blue-700 hover:to-blue-800 rounded-lg font-semibold text-lg text-white shadow-lg transition-all duration-200"
             aria-label="View available courses"
           >
             View Courses
