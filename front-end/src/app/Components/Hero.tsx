@@ -123,6 +123,12 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.5 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           aria-hidden="true"
+          onClick={() => {
+            const section = document.getElementById("why-choose");
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
