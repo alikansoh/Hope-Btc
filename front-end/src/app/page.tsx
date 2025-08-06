@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Hero from "./Components/Hero";
 import WhyChooseUs from "./Components/WhyUs";
 import CoursesPreview from "./Components/CoursePreview";
 import HowItWorks from "./Components/HowItsWork";
+import TrainingCentre from "./Components/TrainingCenter";
 export default function Home() {
   return (
     <div >
@@ -10,6 +10,7 @@ export default function Home() {
       <WhyChooseUs/>
       <CoursesPreview/>
       <HowItWorks/>
+      <TrainingCentre/>
     </div>
   );
 }
