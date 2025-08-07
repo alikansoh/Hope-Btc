@@ -3,6 +3,7 @@ import WhyChooseUs from "./Components/WhyUs";
 import CoursesPreview from "./Components/CoursePreview";
 import HowItWorks from "./Components/HowItsWork";
 import TrainingCentre from "./Components/TrainingCenter";
+import Reviews from "./Components/Reviews"
 export default function Home() {
   return (
     <div >
@@ -11,6 +12,7 @@ export default function Home() {
       <CoursesPreview/>
       <HowItWorks/>
       <TrainingCentre/>
+      <Reviews/>
     </div>
   );
 }
