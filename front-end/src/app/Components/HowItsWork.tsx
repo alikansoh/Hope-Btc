@@ -17,28 +17,44 @@ export default function HowItWorks() {
     {
       title: 'Book Your Place',
       description: 'Choose the right course and reserve your spot online or by phone with our easy booking system.',
-      icon: '📝',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+      ),
       gradient: 'from-blue-500 to-cyan-500',
       bgPattern: 'bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100',
     },
     {
       title: 'Attend Practical Training',
       description: 'Join our hands-on training sessions at our fully equipped centre in Park Royal with expert instructors.',
-      icon: '🧑‍🔧',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
       gradient: 'from-indigo-500 to-purple-500',
       bgPattern: 'bg-gradient-to-br from-indigo-50 via-purple-50 to-indigo-100',
     },
     {
       title: 'Get Certified',
       description: 'Receive your official F-Gas certificate upon successful completion and join the certified professionals.',
-      icon: '🎓',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      ),
       gradient: 'from-purple-500 to-pink-500',
       bgPattern: 'bg-gradient-to-br from-purple-50 via-pink-50 to-purple-100',
     },
     {
       title: 'Start Work or Upgrade Your Career',
       description: 'Use your certification to access new job opportunities or enhance your current role in the industry.',
-      icon: '🚀',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
       gradient: 'from-emerald-500 to-teal-500',
       bgPattern: 'bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100',
     },
@@ -56,7 +72,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-[#146AAC] via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+            <h2 className="text-5xl font-bold  text-[#146AAC] mb-6">
               How It Works
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#146AAC] to-blue-500 mx-auto rounded-full mb-6"></div>
@@ -111,10 +127,12 @@ export default function HowItWorks() {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-white/40 group-hover:from-white/90 group-hover:to-white/60 transition-all duration-500"></div>
                     
                     <div className="text-center relative z-10">
-                      <div className={`text-5xl mb-6 transition-all duration-500 ${
-                        activeStep === index ? 'scale-110 animate-bounce' : 'group-hover:scale-105'
+                      <div className={`mb-6 transition-all duration-500 flex justify-center ${
+                        activeStep === index ? 'scale-110' : 'group-hover:scale-105'
                       }`}>
-                        {step.icon}
+                        <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-gray-700 group-hover:text-[#146AAC] transition-colors duration-300">
+                          {step.icon}
+                        </div>
                       </div>
                       <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-[#146AAC] transition-colors duration-300">
                         {step.title}
@@ -186,7 +204,7 @@ export default function HowItWorks() {
                   
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
-                      <div className="text-4xl mr-4 transition-transform duration-300 group-hover:scale-110">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-gray-700 group-hover:text-[#146AAC] transition-all duration-300 group-hover:scale-110 mr-4">
                         {step.icon}
                       </div>
                       <h3 className="text-lg font-bold text-gray-800 group-hover:text-[#146AAC] transition-colors duration-300">

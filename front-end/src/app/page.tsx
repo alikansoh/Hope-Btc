@@ -4,6 +4,7 @@ import CoursesPreview from "./Components/CoursePreview";
 import HowItWorks from "./Components/HowItsWork";
 import TrainingCentre from "./Components/TrainingCenter";
 import Reviews from "./Components/Reviews"
+import FAQs from "./Components/FAQs";
 export default function Home() {
   return (
     <div >
@@ -13,6 +14,7 @@ export default function Home() {
       <HowItWorks/>
       <TrainingCentre/>
       <Reviews/>
+      <FAQs/>
     </div>
   );
 }
