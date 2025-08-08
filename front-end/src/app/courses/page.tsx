@@ -138,7 +138,7 @@ const CoursesSection = () => {
             F-Gas Certification Courses in London
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Get certified with Hope BTC's comprehensive F-Gas training courses. LCL Awards approved, 
+            Get certified with Hope BTC&apos;s comprehensive F-Gas training courses. LCL Awards approved, 
             hands-on learning, and full compliance with UK/EU regulations.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -181,7 +181,7 @@ const CoursesSection = () => {
               </div>
               
               <div className="p-6">
-                <h4 className="font-bold text-gray-900 mb-3">What You'll Learn:</h4>
+                <h4 className="font-bold text-gray-900 mb-3">What You&apos;ll Learn:</h4>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
@@ -214,7 +214,7 @@ const CoursesSection = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Hope BTC?</h2>
             <p className="text-xl text-gray-600">
-              We're London's leading F-Gas training provider with a proven track record of success.
+              We&apos;re London&apos;s leading F-Gas training provider with a proven track record of success.
             </p>
           </div>
 
@@ -285,7 +285,7 @@ const CoursesSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Get F-Gas Certified?</h2>
           <p className="text-xl mb-8 leading-relaxed">
-            Join hundreds of HVAC professionals who have advanced their careers with Hope BTC's 
+            Join hundreds of HVAC professionals who have advanced their careers with Hope BTC&apos;s 
             comprehensive F-Gas certification courses. Book your course today and take the next 
             step in your professional journey.
           </p>

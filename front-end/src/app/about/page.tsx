@@ -121,8 +121,8 @@ const AboutUsPage = () => {
             <div>
               <h1 className="text-5xl font-bold mb-6">About Hope BTC</h1>
               <p className="text-xl leading-relaxed mb-8">
-                London's premier F-Gas certification training center, dedicated to excellence in HVAC education. 
-                For over 15 years, we've been shaping the careers of refrigeration and air conditioning professionals 
+                London&apos;s premier F-Gas certification training center, dedicated to excellence in HVAC education. 
+                For over 15 years, we&apos;ve been shaping the careers of refrigeration and air conditioning professionals 
                 across the capital.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -158,7 +158,7 @@ const AboutUsPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Story</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From humble beginnings to becoming London's leading F-Gas training provider, 
+              From humble beginnings to becoming London&apos;s leading F-Gas training provider, 
               our journey has been driven by a passion for excellence and student success.
             </p>
           </div>
@@ -185,13 +185,13 @@ const AboutUsPage = () => {
                 <h3 className="text-2xl font-bold text-[#156BAA] mb-6">Where We Are Today</h3>
                 <p className="text-gray-700 leading-7 mb-6">
                   Today, Hope BTC operates from a purpose-built training facility in Park Royal, 
-                  equipped with the latest HVAC equipment and technology. We've trained over 1000 
+                  equipped with the latest HVAC equipment and technology. We&apos;ve trained over 1000 
                   professionals and maintain relationships with major HVAC contractors, facilities 
                   management companies, and individual engineers across London and the South East.
                 </p>
                 <p className="text-gray-700 leading-7">
                   Our commitment to quality has earned us full accreditation from LCL Awards and 
-                  recognition as one of London's premier F-Gas training centers. We continue to 
+                  recognition as one of London&apos;s premier F-Gas training centers. We continue to 
                   innovate our training methods while maintaining the practical, student-focused 
                   approach that has made us successful.
                 </p>
@@ -206,7 +206,7 @@ const AboutUsPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-600">Key milestones in Hope BTC's growth and development</p>
+            <p className="text-xl text-gray-600">Key milestones in Hope BTC&apos;s growth and development</p>
           </div>
 
           <div className="relative">
@@ -310,7 +310,7 @@ const AboutUsPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Training Facility</h2>
             <p className="text-xl text-gray-600">
-              State-of-the-art training center in the heart of London's industrial district
+              State-of-the-art training center in the heart of London&apos;s industrial district
             </p>
           </div>
 
@@ -373,7 +373,7 @@ const AboutUsPage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Start Your F-Gas Journey?</h2>
           <p className="text-xl mb-8 leading-relaxed">
-            Join the Hope BTC family and become part of London's most successful F-Gas training community. 
+            Join the Hope BTC family and become part of London&apos;s most successful F-Gas training community. 
             Our expert instructors and comprehensive courses will set you up for career success.
           </p>
           
