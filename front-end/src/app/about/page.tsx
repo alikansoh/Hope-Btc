@@ -2,399 +2,209 @@ import React from "react";
 import Link from "next/link";
 
 const AboutUsPage = () => {
-  const milestones = [
-    {
-      year: "2008",
-      title: "Company Founded",
-      description: "Hope BTC was established with a vision to provide top-quality HVAC training in London."
-    },
-    {
-      year: "2012",
-      title: "F-Gas Specialization",
-      description: "Became one of London's first dedicated F-Gas certification training centers."
-    },
-    {
-      year: "2015",
-      title: "LCL Accreditation",
-      description: "Achieved full LCL Awards accreditation for all F-Gas certification courses."
-    },
-    {
-      year: "2018",
-      title: "New Training Facility",
-      description: "Opened state-of-the-art training center in Park Royal with modern equipment."
-    },
-    {
-      year: "2020",
-      title: "Digital Innovation",
-      description: "Introduced hybrid learning approaches and digital assessment tools."
-    },
-    {
-      year: "2024",
-      title: "1000+ Graduates",
-      description: "Celebrated training over 1000 F-Gas certified professionals across London."
-    }
-  ];
-
-  const teamMembers = [
-    {
-      name: "David Richardson",
-      position: "Managing Director & Lead Instructor",
-      experience: "25+ years",
-      qualifications: "C&G, F-Gas Cat I, Heat Pump Specialist",
-      image: "👨‍💼",
-      bio: "David founded Hope BTC with a passion for excellence in HVAC training. With over two decades in the industry, he brings real-world experience to every course."
-    },
-    {
-      name: "Sarah Mitchell",
-      position: "Senior F-Gas Instructor",
-      experience: "18+ years",
-      qualifications: "F-Gas Cat I, Refrigeration Engineer, LCL Assessor",
-      image: "👩‍🏫",
-      bio: "Sarah specializes in Category I and II certifications, known for her practical approach and ability to simplify complex technical concepts."
-    },
-    {
-      name: "James Thompson",
-      position: "Technical Training Manager",
-      experience: "22+ years",
-      qualifications: "HNC Mechanical Engineering, F-Gas Expert",
-      image: "👨‍🔧",
-      bio: "James oversees our hands-on training programs and ensures all equipment meets the latest industry standards and regulations."
-    },
-    {
-      name: "Lisa Brown",
-      position: "Course Coordinator & Student Support",
-      experience: "12+ years",
-      qualifications: "Business Management, Training Administration",
-      image: "👩‍💻",
-      bio: "Lisa ensures smooth course operations and provides ongoing support to our students throughout their certification journey."
-    }
-  ];
-
-  const values = [
-    {
-      icon: "🎯",
-      title: "Excellence",
-      description: "We maintain the highest standards in training delivery, ensuring every student receives world-class education."
-    },
-    {
-      icon: "🤝",
-      title: "Integrity",
-      description: "We operate with complete transparency, honesty, and ethical practices in all our interactions."
-    },
-    {
-      icon: "🚀",
-      title: "Innovation",
-      description: "We continuously evolve our training methods and incorporate the latest industry technologies and practices."
-    },
-    {
-      icon: "🌱",
-      title: "Sustainability",
-      description: "We're committed to environmental responsibility and training the next generation of green technology experts."
-    },
-    {
-      icon: "👥",
-      title: "Community",
-      description: "We build lasting relationships with our students and contribute to the growth of London's HVAC community."
-    },
-    {
-      icon: "🏆",
-      title: "Achievement",
-      description: "We celebrate every student's success and take pride in their professional achievements and career growth."
-    }
-  ];
-
-  const accreditations = [
-    { name: "LCL Awards", description: "Fully accredited F-Gas training provider" },
-    { name: "City & Guilds", description: "Approved training center for technical qualifications" },
-    { name: "CITB", description: "Construction Industry Training Board approved" },
-    { name: "ECS", description: "Electrotechnical Certification Scheme member" },
-    { name: "HVCA", description: "Heating & Ventilating Contractors Association" },
-    { name: "Institute of Refrigeration", description: "Professional body membership" }
-  ];
-
   return (
     <div className="bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#156BAA] to-[#1e7bc4] text-white py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl font-bold mb-6">About Hope BTC</h1>
-              <p className="text-xl leading-relaxed mb-8">
-                London&apos;s premier F-Gas certification training center, dedicated to excellence in HVAC education. 
-                For over 15 years, we&apos;ve been shaping the careers of refrigeration and air conditioning professionals 
-                across the capital.
+      {/* Hero Section - About Us */}
+      <section className="relative bg-gradient-to-br from-[#156BAA] via-[#1e7bc4] to-[#2a87d4] text-white py-24 px-4 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-6"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mb-48"></div>
+          <div className="absolute top-20 right-20 w-64 h-64 bg-white/5 rounded-full"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center">
+            <h1 className="text-6xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              About Hope BTC
+            </h1>
+            <div className="max-w-5xl mx-auto mb-12">
+              <p className="text-2xl md:text-3xl font-light leading-relaxed mb-6">
+                London&apos;s premier <strong className="font-bold text-blue-200">F-Gas certification training center</strong>, 
+                dedicated to excellence in <strong className="font-bold text-blue-200">HVAC education</strong>
               </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">1000+</div>
-                  <div className="text-sm">Students Trained</div>
-                </div>
-                <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">98%</div>
-                  <div className="text-sm">Pass Rate</div>
-                </div>
-                <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">15+</div>
-                  <div className="text-sm">Years Experience</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-lg leading-relaxed">
-                To provide comprehensive, practical, and accredited F-Gas training that empowers HVAC professionals 
-                to work safely, legally, and confidently with fluorinated greenhouse gases while contributing to 
-                environmental sustainability and industry excellence.
+              <p className="text-xl leading-relaxed opacity-95">
+                For over 15 years, we&apos;ve been shaping the careers of <strong className="font-semibold">refrigeration and air conditioning professionals</strong> 
+                across the capital, providing comprehensive, practical <strong className="font-semibold">F-Gas training</strong> that empowers professionals to work 
+                safely, legally, and confidently with <strong className="font-semibold">fluorinated greenhouse gases</strong>.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Story */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Story</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From humble beginnings to becoming London&apos;s leading F-Gas training provider, 
-              our journey has been driven by a passion for excellence and student success.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold text-[#156BAA] mb-6">How We Started</h3>
-                <p className="text-gray-700 leading-7 mb-6">
-                  Hope BTC was founded in 2008 by David Richardson, a veteran HVAC engineer who recognized 
-                  the growing need for specialized F-Gas training in London. With the introduction of 
-                  stricter environmental regulations and the phase-down of fluorinated gases, David saw 
-                  an opportunity to create a training center that would truly prepare professionals for 
-                  the evolving industry landscape.
-                </p>
-                <p className="text-gray-700 leading-7 mb-6">
-                  Starting with just a small training room in West London, Hope BTC quickly gained a 
-                  reputation for practical, hands-on training that went beyond just passing exams. 
-                  Our focus on real-world skills and comprehensive understanding set us apart from 
-                  other training providers.
-                </p>
+            
+            <div className="flex flex-wrap justify-center gap-8 mb-12">
+              <div className="bg-white/20 backdrop-blur-sm px-8 py-6 rounded-2xl border border-white/30 hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+                <div className="text-4xl font-black text-blue-200">1000+</div>
+                <div className="text-lg font-medium">Students Trained</div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-[#156BAA] mb-6">Where We Are Today</h3>
-                <p className="text-gray-700 leading-7 mb-6">
-                  Today, Hope BTC operates from a purpose-built training facility in Park Royal, 
-                  equipped with the latest HVAC equipment and technology. We&apos;ve trained over 1000 
-                  professionals and maintain relationships with major HVAC contractors, facilities 
-                  management companies, and individual engineers across London and the South East.
-                </p>
-                <p className="text-gray-700 leading-7">
-                  Our commitment to quality has earned us full accreditation from LCL Awards and 
-                  recognition as one of London&apos;s premier F-Gas training centers. We continue to 
-                  innovate our training methods while maintaining the practical, student-focused 
-                  approach that has made us successful.
-                </p>
+              <div className="bg-white/20 backdrop-blur-sm px-8 py-6 rounded-2xl border border-white/30 hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+                <div className="text-4xl font-black text-blue-200">98%</div>
+                <div className="text-lg font-medium">Pass Rate</div>
               </div>
+              <div className="bg-white/20 backdrop-blur-sm px-8 py-6 rounded-2xl border border-white/30 hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+                <div className="text-4xl font-black text-blue-200">15+</div>
+                <div className="text-lg font-medium">Years Experience</div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 text-sm opacity-90">
+              <span className="bg-blue-400/20 text-blue-100 px-4 py-2 rounded-full font-medium">F-Gas Category I</span>
+              <span className="bg-blue-400/20 text-blue-100 px-4 py-2 rounded-full font-medium">F-Gas Category II</span>
+              <span className="bg-blue-400/20 text-blue-100 px-4 py-2 rounded-full font-medium">LCL Accredited</span>
+              <span className="bg-blue-400/20 text-blue-100 px-4 py-2 rounded-full font-medium">London Training Center</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-600">Key milestones in Hope BTC&apos;s growth and development</p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#156BAA]"></div>
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                    <div className="bg-white rounded-lg shadow-lg p-6">
-                      <div className="text-3xl font-bold text-[#156BAA] mb-2">{milestone.year}</div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
-                    </div>
-                  </div>
-                  <div className="w-6 h-6 bg-[#156BAA] rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
+      {/* Our Vision */}
+      <section className="py-24 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent"></div>
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="mb-16">
+            <div className="inline-block bg-gradient-to-r from-[#156BAA] to-[#2a87d4] text-transparent bg-clip-text mb-6">
+              <h2 className="text-5xl md:text-6xl font-black">Our Vision</h2>
+            </div>
+            <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16 border-t-4 border-[#156BAA] hover:shadow-3xl transition-shadow duration-500">
+              <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed font-light">
+                To be the UK&apos;s leading <strong className="font-bold text-[#156BAA]">F-Gas training provider</strong>, 
+                recognized for transforming <strong className="font-bold text-[#156BAA]">HVAC education</strong> 
+                through innovative, practical training that sets the gold standard for industry excellence.
+              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#156BAA] to-[#2a87d4] mx-auto my-8 rounded-full"></div>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                We envision a future where every <strong className="font-semibold text-gray-900">HVAC professional</strong> has access to world-class education that 
+                not only meets <strong className="font-semibold text-gray-900">regulatory requirements</strong> but exceeds industry expectations, delivered by 
+                experienced instructors with decades of practical expertise in the field.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Values */}
-      <section className="py-20 px-4 bg-gray-100">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-xl text-gray-600">The principles that guide everything we do</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
-              </div>
-            ))}
-          </div>
+      {/* Our Mission */}
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#156BAA]/10 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full -mr-48 -mb-48"></div>
         </div>
-      </section>
-
-      {/* Meet the Team */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Team</h2>
-            <p className="text-xl text-gray-600">
-              Experienced professionals dedicated to your success in F-Gas certification
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="text-6xl">{member.image}</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                      <p className="text-[#156BAA] font-semibold mb-2">{member.position}</p>
-                      <div className="space-y-1 text-sm text-gray-600 mb-4">
-                        <p><strong>Experience:</strong> {member.experience}</p>
-                        <p><strong>Qualifications:</strong> {member.qualifications}</p>
-                      </div>
-                      <p className="text-gray-700 leading-relaxed">{member.bio}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Accreditations */}
-      <section className="py-20 px-4 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Accreditations & Memberships</h2>
-            <p className="text-xl text-gray-300">
-              Recognized and approved by leading industry bodies and certification organizations
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {accreditations.map((accreditation, index) => (
-              <div key={index} className="bg-gray-800 rounded-lg p-6 text-center hover:bg-gray-700 transition-colors">
-                <h3 className="text-lg font-bold text-white mb-2">{accreditation.name}</h3>
-                <p className="text-gray-300 text-sm">{accreditation.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Facility & Location */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Training Facility</h2>
-            <p className="text-xl text-gray-600">
-              State-of-the-art training center in the heart of London&apos;s industrial district
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-[#156BAA] mb-6">Modern Training Environment</h3>
-              <p className="text-gray-700 leading-7 mb-6">
-                Our purpose-built training facility in Park Royal features modern classrooms, 
-                fully-equipped practical workshops, and the latest HVAC equipment for hands-on learning.
+        
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-12 bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
+              Our Mission
+            </h2>
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-12 md:p-16 border border-white/20">
+              <p className="text-2xl md:text-3xl text-white leading-relaxed mb-12 font-light">
+                To provide comprehensive, practical, and accredited <strong className="font-bold text-blue-300">F-Gas training</strong> that empowers 
+                <strong className="font-bold text-blue-300"> HVAC professionals</strong> to work safely, legally, and confidently with 
+                <strong className="font-bold text-blue-300"> fluorinated greenhouse gases</strong> while contributing to environmental sustainability and industry excellence.
               </p>
               
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">✓</span>
-                  <span>Climate-controlled classrooms with modern AV equipment</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">✓</span>
-                  <span>Dedicated practical workshop with real HVAC systems</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">✓</span>
-                  <span>Latest refrigerant recovery and leak detection equipment</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">✓</span>
-                  <span>On-site parking and excellent transport links</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">✓</span>
-                  <span>Student break areas and refreshment facilities</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-100 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-[#156BAA] mb-6">Location & Access</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">📍 Address</h4>
-                  <p className="text-gray-700">Hope BTC Training Center<br />Park Royal Industrial Estate<br />London NW10 7LQ</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+                  <h3 className="text-2xl font-bold text-blue-300 mb-4">Excellence in Education</h3>
+                  <p className="text-lg text-gray-200 leading-relaxed">
+                    Delivering the highest quality <strong className="font-semibold text-white">F-Gas certification training</strong> with practical, 
+                    hands-on learning experiences using industry-standard equipment
+                  </p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">🚇 Transport Links</h4>
-                  <ul className="text-gray-700 space-y-1">
-                    <li>• Park Royal tube station - 5 minutes walk</li>
-                    <li>• Excellent bus connections</li>
-                    <li>• Easy access from A40 and North Circular</li>
-                    <li>• Free on-site parking available</li>
-                  </ul>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+                  <h3 className="text-2xl font-bold text-blue-300 mb-4">Industry Leadership</h3>
+                  <p className="text-lg text-gray-200 leading-relaxed">
+                    Setting the standard for <strong className="font-semibold text-white">professional HVAC training</strong> 
+                    and <strong className="font-semibold text-white">F-Gas certification excellence</strong> in London&apos;s refrigeration and air conditioning sector
+                  </p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+                  <h3 className="text-2xl font-bold text-blue-300 mb-4">Career Advancement</h3>
+                  <p className="text-lg text-gray-200 leading-relaxed">
+                    Empowering students with <strong className="font-semibold text-white">professional certifications</strong> and advanced skills 
+                    that accelerate their careers in the <strong className="font-semibold text-white">HVAC industry</strong>
+                  </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits Section */}
+      <section className="py-24 px-4 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-8">
+              Why Choose Hope BTC for Your <span className="text-[#156BAA]">F-Gas Training</span>?
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#156BAA]">
+              <h3 className="text-xl font-bold text-[#156BAA] mb-4">LCL Accredited</h3>
+              <p className="text-gray-700">Fully accredited <strong>F-Gas certification</strong> recognized across the UK</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-green-500">
+              <h3 className="text-xl font-bold text-green-600 mb-4">Expert Instructors</h3>
+              <p className="text-gray-700">Industry professionals with 20+ years <strong>HVAC experience</strong></p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-yellow-500">
+              <h3 className="text-xl font-bold text-yellow-600 mb-4">London Location</h3>
+              <p className="text-gray-700">Convenient <strong>Park Royal training center</strong> with excellent transport links</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-purple-500">
+              <h3 className="text-xl font-bold text-purple-600 mb-4">98% Pass Rate</h3>
+              <p className="text-gray-700">Proven track record in <strong>F-Gas certification</strong> success</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 bg-[#156BAA] text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Start Your F-Gas Journey?</h2>
-          <p className="text-xl mb-8 leading-relaxed">
-            Join the Hope BTC family and become part of London&apos;s most successful F-Gas training community. 
-            Our expert instructors and comprehensive courses will set you up for career success.
+      <section className="py-24 px-4 bg-gradient-to-r from-[#156BAA] via-[#1e7bc4] to-[#2a87d4] text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-black/20"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32"></div>
+        </div>
+        
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h2 className="text-5xl md:text-6xl font-black mb-8">
+            Ready to Start Your <span className="text-blue-300">F-Gas Journey</span>?
+          </h2>
+          <p className="text-2xl mb-12 leading-relaxed font-light">
+            Join the Hope BTC family and become part of London&apos;s most successful <strong className="font-bold text-blue-300">F-Gas training community</strong>. 
+            Our expert instructors and comprehensive <strong className="font-bold text-blue-300">HVAC courses</strong> will set you up for career success.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link 
               href="/courses" 
-              className="bg-white text-[#156BAA] px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition-colors"
+              className="bg-white text-[#156BAA] px-10 py-5 rounded-2xl text-xl font-black hover:bg-blue-100 hover:text-gray-900 transition-all duration-300 transform hover:scale-105 shadow-2xl inline-block"
             >
-              View Our Courses
+              View F-Gas Courses
             </Link>
             <Link 
               href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white hover:text-[#156BAA] transition-colors"
+              className="border-3 border-white text-white px-10 py-5 rounded-2xl text-xl font-black hover:bg-white hover:text-[#156BAA] transition-all duration-300 transform hover:scale-105 shadow-2xl inline-block"
             >
-              Contact Us Today
+              Book Training Today
             </Link>
           </div>
 
-          <div className="text-center">
-            <p className="text-lg mb-4">Questions about our training or certification process?</p>
-            <p className="text-xl font-semibold">Call us: 020 8961 4545</p>
+          <div className="bg-white/15 backdrop-blur-lg rounded-3xl p-12 border border-white/30">
+            <p className="text-xl mb-6 font-medium">Questions about our <strong>F-Gas certification training</strong>?</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <p className="text-3xl font-black mb-2 text-blue-300">020 8961 4545</p>
+                <p className="text-lg opacity-90">Call us directly</p>
+              </div>
+              <div>
+                <p className="text-xl font-bold mb-2">Monday - Friday</p>
+                <p className="text-lg opacity-90">9:00 AM - 5:30 PM</p>
+              </div>
+              <div>
+                <p className="text-xl font-bold mb-2">Email Us</p>
+                <p className="text-lg opacity-90">info@hopebtc.co.uk</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#156BAA] via-[#1B7BC0] to-[#0F5A96] text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-[#156BAA] via-[#1B7BC0] to-[#0F5A96] text-white relative overflow-hidden mt-16">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-2xl"></div>

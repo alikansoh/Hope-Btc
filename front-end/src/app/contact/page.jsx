@@ -68,9 +68,9 @@ const ContactUsPage = () => {
       icon: "📞",
       title: "Phone",
       details: [
-        "Main: 020 8961 4545",
+        
         "Mobile: 07834 567 890",
-        "Fax: 020 8961 4546"
+       
       ]
     },
     {
@@ -78,8 +78,7 @@ const ContactUsPage = () => {
       title: "Email",
       details: [
         "info@hopebtc.co.uk",
-        "bookings@hopebtc.co.uk",
-        "support@hopebtc.co.uk"
+        
       ]
     },
     {
@@ -336,21 +335,11 @@ const ContactUsPage = () => {
                       <span className="text-xl mr-3">📧</span>
                       <div>
                         <div className="font-semibold">Book a Course</div>
-                        <div className="text-sm opacity-90">bookings@hopebtc.co.uk</div>
+                        <div className="text-sm opacity-90">info@hopebtc.co.uk</div>
                       </div>
                     </div>
                   </a>
-                  
-                  <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg">
-                    <div className="flex items-center">
-                      <span className="text-xl mr-3">⚡</span>
-                      <div>
-                        <div className="font-semibold">Emergency Support</div>
-                        <div className="text-sm opacity-90">24/7 student support line</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                              </div>
               </div>
             </div>
           </div>
@@ -385,71 +374,13 @@ const ContactUsPage = () => {
             </div>
 
             {/* Transport Information */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">How to Get Here</h3>
-              {transportOptions.map((transport, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-3">{transport.type}</h4>
-                  <ul className="space-y-2">
-                    {transport.details.map((detail, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-start">
-                        <span className="text-green-500 mr-2 mt-0.5">•</span>
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">
-              Quick answers to common questions about booking and attending courses
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                question: "How do I book a course?",
-                answer: "You can book by calling us at 020 8961 4545, emailing bookings@hopebtc.co.uk, or using our online contact form."
-              },
-              {
-                question: "What should I bring to the course?",
-                answer: "We provide all equipment and materials. Just bring a notepad, pen, and your enthusiasm to learn!"
-              },
-              {
-                question: "Are there parking facilities?",
-                answer: "Yes, we have free on-site parking available for all students throughout the course duration."
-              },
-              {
-                question: "What if I need to reschedule?",
-                answer: "We understand plans change. Contact us at least 48 hours before your course start date to reschedule without penalty."
-              },
-              {
-                question: "Do you offer group discounts?",
-                answer: "Yes, we offer competitive group rates for companies training multiple employees. Contact us for a quote."
-              },
-              {
-                question: "Is lunch provided?",
-                answer: "Light refreshments are provided. There are also excellent local cafes and restaurants within walking distance."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="font-bold text-gray-900 mb-3">{faq.question}</h3>
-                <p className="text-gray-700">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Call to Action */}
       <section className="py-20 px-4 bg-[#156BAA] text-white">
