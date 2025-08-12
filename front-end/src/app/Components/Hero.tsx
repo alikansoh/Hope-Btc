@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Status Badge */}
         <div className="inline-flex items-center px-6 py-3 mb-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-sm font-semibold text-white shadow-2xl hover:bg-white/15 transition-colors duration-300">
           <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 shadow-lg animate-pulse" />
-          London&apos;s #1 F-Gas Training Provider
+          F-Gas Training Provider
         </div>
 
         {/* Main Heading */}
@@ -62,7 +62,7 @@ export default function Hero() {
             textShadow: "0 2px 8px rgba(0, 0, 0, 0.4)",
           }}
         >
-          London&apos;s Most Trusted F-Gas Training Provider
+       F-Gas Training Provider
         </p>
 
         {/* Description */}

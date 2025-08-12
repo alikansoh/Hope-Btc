@@ -4,7 +4,14 @@ import { useState, useEffect } from "react";
 
 export default function TrainingCentre() {
   const [isVisible, setIsVisible] = useState(false);
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    "/images/center2.jpeg",
+    "/images/center.jpeg",
+    "/images/center3.jpeg",
+  ];
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -15,7 +22,7 @@ export default function TrainingCentre() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById('training-centre');
+    const element = document.getElementById("training-centre");
     if (element) {
       observer.observe(element);
     }
@@ -27,51 +34,101 @@ export default function TrainingCentre() {
     };
   }, []);
 
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   const features = [
-    "Hands-on training with modern HVAC tools and systems",
+    "Hands-on training with modern Refrigeration and HVAC tools and systems",
     "Supportive and approachable instructors with real-world experience",
     "Calm, focused environment ideal for practical learning",
     "Small class sizes for maximum interaction and guidance",
     "Clean, professional classrooms with all required safety standards",
-    "Real-world scenarios preparing you for immediate field work"
+    "Real-world scenarios preparing you for immediate field work",
   ];
 
   return (
     <section id="training-centre" className="relative py-20 overflow-hidden">
       {/* Simple background with subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-[#1569AA]/5"></div>
-      
+
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
-          <div className={`transform transition-all duration-800 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'}`}>
-            <div className="relative">
-              <div className="bg-white p-3 rounded-2xl shadow-xl">
-                <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/center.jpeg"
-                    alt="Hope BTC Training Centre"
-                    width={800}
-                    height={600}
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+          {/* Image Slider Section */}
+          <div
+            className={`relative transform transition-all duration-800 ${
+              isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+            }`}
+          >
+            <div className="bg-white p-3 rounded-2xl shadow-xl">
+              <div className="rounded-xl overflow-hidden relative">
+                <Image
+                  src={images[currentIndex]}
+                  alt={`Hope BTC Training Centre - Slide ${currentIndex + 1}`}
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                  priority={true}
+                />
+
+                {/* Left Arrow */}
+                <button
+                  onClick={prevSlide}
+                  aria-label="Previous Slide"
+                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-[#1569AA] rounded-full p-2 shadow-md hover:shadow-lg transition duration-300 ease-in-out scale-100 hover:scale-110"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                {/* Right Arrow */}
+                <button
+                  onClick={nextSlide}
+                  aria-label="Next Slide"
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-[#1569AA] rounded-full p-2 shadow-md hover:shadow-lg transition duration-300 ease-in-out scale-100 hover:scale-110"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
 
           {/* Content Section */}
-          <div className={`transform transition-all duration-800 delay-200 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+          <div
+            className={`transform transition-all duration-800 delay-200 ${
+              isVisible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+            }`}
+          >
             <div className="space-y-6">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                  Inside Our 
+                  Inside Our
                   <span className="text-[#1569AA]"> Training Centre</span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                  Our facility is fully equipped with real-world refrigeration and air
-                  conditioning systems, giving you the hands-on experience needed to
-                  confidently work in the field.
+                  Our facility is fully equipped with real-world refrigeration and
+                  air conditioning systems, giving you the hands-on experience needed
+                  to confidently work in the field.
                 </p>
               </div>
 
@@ -82,7 +139,7 @@ export default function TrainingCentre() {
                     <li
                       key={index}
                       className={`flex items-start text-gray-700 leading-relaxed transform transition-all duration-500 ${
-                        isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+                        isVisible ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"
                       }`}
                       style={{ transitionDelay: `${index * 100 + 400}ms` }}
                     >
@@ -97,10 +154,11 @@ export default function TrainingCentre() {
               <div className="bg-[#1569AA] rounded-xl p-6 text-white">
                 <h4 className="text-lg font-semibold mb-2">Ready to Start Your Training?</h4>
                 <p className="text-blue-100 mb-4">
-                  Learn more about our programs and facility. Get all the information you need to begin your HVAC career.
+                  Learn more about our programs and facility. Get all the information you
+                  need to begin your Refrigeration and HVAC career.
                 </p>
-                <a 
-                  href="/contact-us" 
+                <a
+                  href="/contact-us"
                   className="inline-block bg-white text-[#1569AA] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
                 >
                   Contact Us

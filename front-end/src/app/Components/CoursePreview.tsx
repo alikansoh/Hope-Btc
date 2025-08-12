@@ -6,30 +6,27 @@ const courses = [
       title: 'F-Gas Category 1',
       description: 'Comprehensive certification for installation, servicing, maintenance, leak checking, and refrigerant recovery on all equipment types.',
       level: 'Full Certification',
-      duration: '5 Days',
       opacity: '1'
     },
     {
       title: 'F-Gas Category 2',
       description: 'Covers systems containing less than 3kg (or 6kg if hermetically sealed) – includes installation, servicing, and recovery.',
       level: 'Intermediate Certification',
-      duration: '3 Days',
       opacity: '0.85'
     },
     {
       title: 'F-Gas Category 3',
-      description: 'For personnel performing leak checking only – without refrigerant recovery or maintenance tasks.',
-      level: 'Leak Check Only',
-      duration: '1 Day',
-      opacity: '0.7'
+      description: 'Certification limited to refrigerant recovery only – no servicing, maintenance or installation work allowed.',
+      level: 'Recovery Only',
+      opacity: '0.55'
     },
     {
       title: 'F-Gas Category 4',
-      description: 'Certification limited to refrigerant recovery only – no servicing, maintenance or installation work allowed.',
-      level: 'Recovery Only',
-      duration: '1 Day',
-      opacity: '0.55'
+      description: 'For personnel performing leak checking only – without refrigerant recovery or maintenance tasks.',
+      level: 'Leak Check Only',
+      opacity: '0.7'
     },
+   
   ]
   
   
@@ -49,7 +46,7 @@ export default function CoursesPreview() {
         <div className="text-center mb-16">
          
           <h2 className="text-5xl font-bold mb-6" style={{color: '#146AAC'}}>
-            Master F-Gas Certifications
+          F-Gas Certifications
           </h2>
           <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{color: '#146AAC'}}>
             Industry-leading certifications that open doors to lucrative career opportunities in HVAC and refrigeration
@@ -88,12 +85,7 @@ export default function CoursesPreview() {
                 </p>
                 
                 {/* Duration */}
-                <div className="flex items-center gap-2 text-xs" style={{color: '#146AAC', opacity: '0.7'}}>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>{course.duration}</span>
-                </div>
+                
               </div>
             </div>
           ))}

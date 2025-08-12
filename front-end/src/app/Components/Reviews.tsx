@@ -12,7 +12,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Ahmed R.',
     text: 'The training was hands-on and incredibly helpful. I passed my F-Gas exam with confidence!',
-    role: 'HVAC Technician',
+    role: 'Refrigeration and HVAC Technician',
     rating: 5,
   },
   {

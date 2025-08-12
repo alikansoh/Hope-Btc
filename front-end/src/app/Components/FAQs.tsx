@@ -49,9 +49,8 @@ const FAQs = () => {
               </svg>
             </summary>
             <p className="mt-3 text-gray-600">
-              It depends on the category. Category 1 takes 5 days, Category 2 is
-              3 days, while Category 3 and 4 each take 1 day. All training
-              includes hands-on practical sessions and assessments.
+              The course duration varies depending on the category and the
+              candidate&apos;s previous experience.
             </p>
           </details>
 
@@ -71,34 +70,31 @@ const FAQs = () => {
             </summary>
             <p className="mt-3 text-gray-600">
               Hope BTC provides a professional and supportive learning
-              environment featuring real industry-grade HVAC equipment, small
+              environment featuring real industry-grade Refrigeration and HVAC equipment, small
               class sizes for personalised attention, expert instructors, and a
               calm, focused setting to ensure effective hands-on training.
             </p>
           </details>
 
-          {/* Question 4 */}
-          <details className="group border border-gray-200 rounded-lg p-4">
-            <summary className="font-semibold cursor-pointer flex justify-between items-center">
-              <span>
-                Do I need prior experience in HVAC to attend this course?
-              </span>
-              <svg
-                className="w-5 h-5 text-[#156BAA] group-open:rotate-180 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <p className="mt-3 text-gray-600">
-              No previous experience is required for F-Gas Category 1. Our
-              instructors guide you through both theory and practical aspects,
-              making it suitable for beginners and professionals alike.
-            </p>
-          </details>
+        {/* Question 4 */}
+<details className="group border border-gray-200 rounded-lg p-4">
+  <summary className="font-semibold cursor-pointer flex justify-between items-center">
+    <span>How much does the F-Gas course cost?</span>
+    <svg
+      className="w-5 h-5 text-[#156BAA] group-open:rotate-180 transition-transform"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path d="M19 9l-7 7-7-7" />
+    </svg>
+  </summary>
+  <p className="mt-3 text-gray-600">
+    The cost varies depending on the length of the course and the category.
+    </p>
+</details>
+
         </div>
       </div>
     </section>

@@ -25,9 +25,8 @@ const Footer = () => {
               <p className="text-white/90 leading-relaxed text-sm">
                 London&apos;s trusted F-Gas training provider, offering
                 accredited courses, expert instructors, and hands-on practical
-                learning in Park Royal.
+                learning in North West London .
               </p>
-             
             </div>
 
             {/* Quick Links */}
@@ -73,7 +72,6 @@ const Footer = () => {
                     Contact
                   </Link>
                 </li>
-              
               </ul>
             </div>
 
@@ -89,7 +87,8 @@ const Footer = () => {
                     <span className="text-xs">📍</span>
                   </div>
                   <p className="text-white/90 text-sm leading-relaxed">
-                    Park Royal, London, UK
+                    Hope BTC Training Center Suite 50, Unimix House, Abbey Road
+                    London NW10 7TR United Kingdom
                   </p>
                 </div>
                 <div className="flex items-center space-x-3 group">
@@ -97,10 +96,10 @@ const Footer = () => {
                     <span className="text-xs">📞</span>
                   </div>
                   <a
-                    href="tel:+441234567890"
+                    href="tel:+44 7359 609398"
                     className="text-white/90 hover:text-white transition-colors text-sm"
                   >
-                    +44 1234 567 890
+                    +44 7359 609398{" "}
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 group">

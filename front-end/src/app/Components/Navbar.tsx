@@ -9,7 +9,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const isActive = (href: string) => pathname === href || pathname === href + "/";
+  const isActive = (href: string) =>
+    pathname === href || pathname === href + "/";
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -35,33 +36,43 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-full">
           <div className="flex items-center space-x-8">
-            {/* Email */}
-            <div className="flex items-center space-x-2 group cursor-pointer transition-all duration-300 hover:text-blue-200">
-              <div className="p-1 rounded-full bg-black/20 group-hover:bg-black/30">
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
+            <a
+              href="mailto:info@hopebtc.co.uk"
+              className="flex items-center space-x-2 group cursor-pointer transition-all duration-300 hover:text-blue-200"
+            >
+              {/* Email */}
+              <div className="flex items-center space-x-2 group cursor-pointer transition-all duration-300 hover:text-blue-200">
+                <div className="p-1 rounded-full bg-black/20 group-hover:bg-black/30">
+                  <svg
+                    className="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">info@hopebtc.co.uk</span>
               </div>
-              <span className="text-sm font-medium">info@hope-btc.co.uk</span>
-            </div>
+            </a>
 
             {/* Phone */}
             <div className="flex items-center space-x-2 group cursor-pointer transition-all duration-300 hover:text-blue-200">
-              <div className="p-1 rounded-full bg-black/20 group-hover:bg-black/30">
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium">+44 1206 123 456</span>
+              <a
+                href="tel:+447359609398"
+                className="flex items-center space-x-2 group cursor-pointer transition-all duration-300 hover:text-blue-200"
+              >
+                <div className="p-1 rounded-full bg-black/20 group-hover:bg-black/30">
+                  <svg
+                    className="w-3.5 h-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium">07359 609398</span>
+              </a>
             </div>
           </div>
 
@@ -81,7 +92,7 @@ export default function Navbar() {
                 />
               </svg>
               <span className="text-sm font-semibold text-blue-100">
-                Accredited Center
+                Accredited Centre by LCL Awards
               </span>
             </div>
             <div className="hidden lg:flex items-center space-x-2">

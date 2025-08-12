@@ -59,6 +59,7 @@ const ContactUsPage = () => {
       title: "Address",
       details: [
         "Hope BTC Training Center",
+        "suite 50",
         "Unimix House, Abbey Road",
         "London NW10 7TR",
         "United Kingdom"
@@ -69,7 +70,7 @@ const ContactUsPage = () => {
       title: "Phone",
       details: [
         
-        "Mobile: 07834 567 890",
+        "Mobile: 07359 609398",
        
       ]
     },
@@ -81,16 +82,7 @@ const ContactUsPage = () => {
         
       ]
     },
-    {
-      icon: "🕐",
-      title: "Opening Hours",
-      details: [
-        "Monday - Friday: 8:00 AM - 6:00 PM",
-        "Saturday: 9:00 AM - 2:00 PM",
-        "Sunday: Closed",
-        "Bank Holidays: Closed"
-      ]
-    }
+    
   ];
 
   const transportOptions = [
@@ -136,11 +128,11 @@ const ContactUsPage = () => {
           <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
             Ready to start your F-Gas certification journey? Get in touch with our expert team 
-            for course information, bookings, or any questions about HVAC training.
+            for course information, bookings, or any questions about Refrigeration and HVAC training.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:02089614545" className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg hover:bg-white/30 transition-colors">
-              📞 Call Now: 020 8961 4545
+            <a href="tel:07359 609398" className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg hover:bg-white/30 transition-colors">
+              📞 Call Now: 07359 609398
             </a>
             <a href="mailto:info@hopebtc.co.uk" className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg hover:bg-white/30 transition-colors">
               ✉️ Email Us
@@ -315,14 +307,14 @@ const ContactUsPage = () => {
                 <h3 className="text-2xl font-bold mb-6">Quick Actions</h3>
                 <div className="space-y-4">
                   <a 
-                    href="tel:02089614545" 
+                    href="tel:07359 609398" 
                     className="block w-full bg-white/20 backdrop-blur-sm p-4 rounded-lg hover:bg-white/30 transition-colors"
                   >
                     <div className="flex items-center">
                       <span className="text-xl mr-3">📞</span>
                       <div>
                         <div className="font-semibold">Call Us Now</div>
-                        <div className="text-sm opacity-90">020 8961 4545</div>
+                        <div className="text-sm opacity-90">07359 609398</div>
                       </div>
                     </div>
                   </a>
@@ -393,10 +385,10 @@ const ContactUsPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:02089614545"
+              href="tel07359 609398"
               className="bg-white text-[#156BAA] px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition-colors"
             >
-              Call Now: 020 8961 4545
+              Call Now: 07359 609398
             </a>
             <a 
               href="mailto:bookings@hopebtc.co.uk"
