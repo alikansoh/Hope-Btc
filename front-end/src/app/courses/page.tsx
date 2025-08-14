@@ -107,7 +107,7 @@ const CoursesSection = () => {
               ✓ Hands-On Training
             </span>
             <span className="bg-white/20 px-4 py-2 rounded-full">
-              ✓ North West London{" "}
+              ✓ London{" "}
             </span>
             <span className="bg-white/20 px-4 py-2 rounded-full">
               ✓ Expert Instructors

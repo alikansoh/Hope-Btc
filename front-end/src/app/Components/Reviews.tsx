@@ -16,7 +16,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    name: 'Fatima K.',
+    name: 'Kristy K.',
     text: 'The instructors were patient and knowledgeable. I highly recommend Hope BTC!',
     role: 'Refrigeration Engineer',
     rating: 5,

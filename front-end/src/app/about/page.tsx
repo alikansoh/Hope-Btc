@@ -232,7 +232,7 @@ const AboutUsPage = () => {
                 London Location
               </h3>
               <p className="text-gray-700">
-                Convenient <strong>North West training center</strong> with
+                Convenient <strong>London training center</strong> with
                 excellent transport links
               </p>
             </div>

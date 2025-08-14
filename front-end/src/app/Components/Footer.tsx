@@ -25,7 +25,7 @@ const Footer = () => {
               <p className="text-white/90 leading-relaxed text-sm">
                 London&apos;s trusted F-Gas training provider, offering
                 accredited courses, expert instructors, and hands-on practical
-                learning in North West London .
+                learning in London .
               </p>
             </div>
 
