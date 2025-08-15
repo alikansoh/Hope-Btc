@@ -1,7 +1,9 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactUsPage = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,6 +16,11 @@ const ContactUsPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
+  // EmailJS configuration - Replace with your actual values
+  const EMAILJS_SERVICE_ID = 'service_8xi6eoj'; 
+  const EMAILJS_TEMPLATE_ID = 'template_x0wncxr'; 
+  const EMAILJS_PUBLIC_KEY = 'A4JrpQy20GzSe3cjz'; 
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -25,11 +32,37 @@ const ContactUsPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+    setSubmitStatus('');
+
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus('error');
       setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Create form data object for EmailJS
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        course: formData.course,
+        message: formData.message,
+        preferredContact: formData.preferredContact,
+      };
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', result.text);
       setSubmitStatus('success');
+      
       // Reset form
       setFormData({
         name: '',
@@ -42,7 +75,13 @@ const ContactUsPage = () => {
       
       // Clear success message after 5 seconds
       setTimeout(() => setSubmitStatus(''), 5000);
-    }, 1000);
+      
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const courses = [
@@ -69,9 +108,7 @@ const ContactUsPage = () => {
       icon: "📞",
       title: "Phone",
       details: [
-        
         "Mobile: 07359 609398",
-       
       ]
     },
     {
@@ -79,45 +116,8 @@ const ContactUsPage = () => {
       title: "Email",
       details: [
         "info@hopebtc.co.uk",
-        
       ]
     },
-    
-  ];
-
-  const transportOptions = [
-    {
-      type: "🚇 Tube",
-      details: [
-        "Park Royal Station (Piccadilly Line)",
-        "3 minutes walk from station",
-        "Direct connections to Central London"
-      ]
-    },
-    {
-      type: "🚌 Bus",
-      details: [
-        "Routes 226, 440, 487",
-        "Stop: Park Royal Station",
-        "Regular services throughout the day"
-      ]
-    },
-    {
-      type: "🚗 Car",
-      details: [
-        "Easy access from A40 Western Avenue",
-        "Junction with North Circular (A406)",
-        "Free on-site parking available"
-      ]
-    },
-    {
-      type: "🚲 Cycle",
-      details: [
-        "Cycle Superhighway nearby",
-        "Secure bike storage available",
-        "Shower facilities on-site"
-      ]
-    }
   ];
 
   return (
@@ -131,7 +131,7 @@ const ContactUsPage = () => {
             for course information, bookings, or any questions about Refrigeration and HVAC training.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:07359 609398" className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg hover:bg-white/30 transition-colors">
+            <a href="tel:07359609398" className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg hover:bg-white/30 transition-colors">
               📞 Call Now: 07359 609398
             </a>
             <a href="mailto:info@hopebtc.co.uk" className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg hover:bg-white/30 transition-colors">
@@ -152,11 +152,17 @@ const ContactUsPage = () => {
               
               {submitStatus === 'success' && (
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-                  Thank you for your message! We'll get back to you within 24 hours.
+                  ✅ Thank you for your message! We'll get back to you within 24 hours.
                 </div>
               )}
 
-              <div className="space-y-6">
+              {submitStatus === 'error' && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+                  ❌ Sorry, there was an error sending your message. Please try again or call us directly.
+                </div>
+              )}
+
+                <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -227,7 +233,7 @@ const ContactUsPage = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="preferredContact" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
                     Preferred Contact Method
                   </label>
                   <div className="flex gap-4">
@@ -307,7 +313,7 @@ const ContactUsPage = () => {
                 <h3 className="text-2xl font-bold mb-6">Quick Actions</h3>
                 <div className="space-y-4">
                   <a 
-                    href="tel:07359 609398" 
+                    href="tel:07359609398" 
                     className="block w-full bg-white/20 backdrop-blur-sm p-4 rounded-lg hover:bg-white/30 transition-colors"
                   >
                     <div className="flex items-center">
@@ -320,7 +326,7 @@ const ContactUsPage = () => {
                   </a>
                   
                   <a 
-                    href="mailto:bookings@hopebtc.co.uk" 
+                    href="mailto:info@hopebtc.co.uk" 
                     className="block w-full bg-white/20 backdrop-blur-sm p-4 rounded-lg hover:bg-white/30 transition-colors"
                   >
                     <div className="flex items-center">
@@ -331,7 +337,7 @@ const ContactUsPage = () => {
                       </div>
                     </div>
                   </a>
-                              </div>
+                </div>
               </div>
             </div>
           </div>
@@ -364,15 +370,9 @@ const ContactUsPage = () => {
                 />
               </div>
             </div>
-
-            {/* Transport Information */}
-            
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-     
 
       {/* Call to Action */}
       <section className="py-20 px-4 bg-[#156BAA] text-white">
@@ -385,13 +385,13 @@ const ContactUsPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel07359 609398"
+              href="tel:07359609398"
               className="bg-white text-[#156BAA] px-8 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Call Now: 07359 609398
             </a>
             <a 
-              href="mailto:bookings@hopebtc.co.uk"
+              href="mailto:info@hopebtc.co.uk"
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white hover:text-[#156BAA] transition-colors"
             >
               Email Us Today
