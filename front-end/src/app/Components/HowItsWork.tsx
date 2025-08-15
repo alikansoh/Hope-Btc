@@ -59,7 +59,7 @@ export default function HowItWorks() {
     {
       title: "Attend Practical Training",
       description:
-        "Join our hands-on training sessions at our fully equipped centre in Park Royal with expert instructors.",
+        "Join our hands-on training sessions at our fully equipped centre in London with expert instructors.",
       icon: (
         <svg
           className="w-8 h-8"

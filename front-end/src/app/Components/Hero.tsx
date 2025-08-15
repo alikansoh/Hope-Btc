@@ -76,7 +76,7 @@ export default function Hero() {
           <p className="text-base md:text-lg text-gray-300 leading-relaxed">
             Our high-quality, accredited F-Gas training is designed to meet
             legal compliance and industry standards. Conveniently located in
-            Park Royal London, we offer small class sizes, expert instructors,
+             London, we offer small class sizes, expert instructors,
             hands-on learning, and flexible schedules.
           </p>
         </div>

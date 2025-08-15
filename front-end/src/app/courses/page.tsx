@@ -13,7 +13,7 @@ const CoursesSection = () => {
       color: "bg-gradient-to-br from-green-600 to-green-800",
     },
     {
-      title: "Refrigeration and Air Conditioning Commissioning Fault Finding",
+      title: "Refrigeration and Air Conditioning Commissioning and Fault Finding",
 
       color: "bg-gradient-to-br from-orange-600 to-orange-800",
     },

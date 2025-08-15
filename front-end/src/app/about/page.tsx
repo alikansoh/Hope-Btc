@@ -66,7 +66,7 @@ const AboutUsPage = () => {
                 F-Gas all Categories
               </span>
               <span className="bg-blue-400/20 text-blue-100 px-4 py-2 rounded-full font-medium">
-                LCL Accredited
+                LCL Awards Accredited
               </span>
               <span className="bg-blue-400/20 text-blue-100 px-4 py-2 rounded-full font-medium">
                 London Training Center
