@@ -211,7 +211,7 @@ const AboutUsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#156BAA]">
               <h3 className="text-xl font-bold text-[#156BAA] mb-4">
-                LCL Accredited
+                LCL Awards Accredited
               </h3>
               <p className="text-gray-700">
                 Fully accredited <strong>F-Gas certification</strong> recognized
